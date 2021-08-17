@@ -38,6 +38,15 @@ class LinkedList {
     return this;
   }
 
+  appendLinks(linkedNodes) {
+    let current = this.head;
+    while (current.next) {
+      current = current.next;
+    }
+    current.next = linkedNodes;
+    return this;
+  }
+
   append(value) {
     let node = new Node(value);
     if (!this.head) {
